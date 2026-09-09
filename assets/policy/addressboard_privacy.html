@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소보드 — 개인정보처리방침</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; color: #333; max-width: 760px; }
+        h1, h2 { color: #0D59F2; }
+        p, ul { margin-bottom: 1em; }
+        a { color: #0D59F2; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; }
+        .en { color: #555; border-top: 1px solid #ddd; margin-top: 2.5em; padding-top: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>개인정보처리방침</h1>
+    <p>본 개인정보처리방침은 안드로이드 앱 <strong>주소보드</strong>
+       (패키지명 <code>dev.wangmaac.addressboard</code>, 이하 "앱")에 적용됩니다.</p>
+
+    <p>앱은 회원가입을 요구하지 않으며, 사용자의 이름·이메일·전화번호 등
+       직접적인 개인 식별 정보를 <strong>수집하지 않습니다</strong>.
+       앱에는 서버가 없고, 사용자가 저장한 주소는 <strong>기기 밖으로 나가지 않습니다</strong>.</p>
+
+    <h2>1. 기기 안에만 저장되는 정보</h2>
+    <p>앱은 다음 정보를 <strong>사용자 기기 내부에만</strong> 저장하며, 외부로 전송하지 않습니다.</p>
+    <ul>
+        <li>사용자가 직접 입력·저장한 주소 (별칭, 우편번호, 도로명/지번 주소, 상세주소)</li>
+        <li>주소 목록의 순서 등 앱 설정</li>
+        <li>광고 제거 구매 여부</li>
+    </ul>
+    <p>주소는 사용자가 스스로 입력해 저장하는 정보이며, 앱은 이를
+       <strong>기기 내부 저장소에만</strong> 보관합니다. 서버로 전송되지 않고,
+       계정과 연결되지 않으며, <strong>앱을 삭제하면 함께 삭제됩니다</strong>.
+       개발자를 포함한 누구도 사용자가 저장한 주소를 열람할 수 없습니다.</p>
+
+    <h2>2. 주소 검색 시 외부로 전송되는 정보</h2>
+    <p>주소를 새로 추가할 때 사용하는 <strong>우편번호 검색 화면</strong>은
+       카카오(다음) 우편번호 서비스를 앱 안의 웹 화면으로 불러와 표시합니다.
+       이때 사용자가 검색창에 입력한 <strong>검색어(예: 도로명, 건물명)</strong>가
+       해당 서비스로 전송됩니다.</p>
+    <ul>
+        <li>전송 시점: 사용자가 주소 검색 화면에서 검색어를 입력할 때에 한함</li>
+        <li>전송 항목: 검색어 및 웹 요청에 수반되는 기본 정보(IP 주소 등)</li>
+        <li>처리 주체: 카카오(다음 우편번호 서비스)</li>
+    </ul>
+    <p>이미 저장한 주소를 꺼내 쓰거나 복사하는 동작에는 네트워크 통신이 없습니다.
+       검색 결과로 선택한 주소 역시 기기 안에만 저장됩니다.</p>
+
+    <h2>3. 광고를 위해 수집되는 정보</h2>
+    <p>앱은 목록 화면 하단에 <strong>배너 광고</strong>를 표시하며 Google AdMob 을
+       사용합니다. 이 과정에서 AdMob 이 맞춤형 광고 제공을 위해
+       <strong>광고 ID(Advertising ID)를 포함한 기기 식별자</strong>를 사용할 수 있습니다.</p>
+    <ul>
+        <li>수집 항목: 기기 또는 기타 ID(광고 ID)</li>
+        <li>목적: 광고 게재 및 광고 성과 측정</li>
+        <li>처리 주체: Google AdMob</li>
+    </ul>
+    <p>광고는 저장한 주소의 내용과 무관하게 게재됩니다. 앱은 사용자가 저장한 주소를
+       광고 사업자를 포함한 어떤 제3자에게도 제공하지 않습니다.
+       앱 내 결제로 광고를 제거하면 배너가 표시되지 않습니다.</p>
+
+    <h2>4. 다른 앱 위에 표시 권한과 클립보드</h2>
+    <p>앱은 다른 앱 위에 떠 있는 <strong>플로팅 버튼</strong>을 제공하기 위해
+       "다른 앱 위에 표시"(<code>SYSTEM_ALERT_WINDOW</code>) 권한과
+       이를 유지하기 위한 포그라운드 서비스를 사용합니다.</p>
+    <ul>
+        <li>이 권한은 <strong>앱 자신의 창을 화면 위에 띄우기 위해서만</strong> 사용합니다.
+            다른 앱의 화면 내용을 읽거나 기록하지 않으며, 그럴 수 있는 권한도 없습니다.</li>
+        <li>앱은 클립보드에 <strong>쓰기만</strong> 합니다. 사용자가 목록에서 선택한
+            주소를 복사해 넣을 뿐이며, 클립보드의 기존 내용을 읽지 않습니다.</li>
+        <li>플로팅 버튼은 사용자가 앱에서 직접 켤 때만 나타나며, 언제든 끌 수 있습니다.</li>
+    </ul>
+
+    <h2>5. 사용하지 않는 것</h2>
+    <p>앱은 다음을 사용하지 않습니다.</p>
+    <ul>
+        <li>사용자 분석 도구(Analytics)</li>
+        <li>충돌 보고 도구(Crash Reporting)</li>
+        <li>위치 정보, 연락처, 사진, 카메라, 마이크, 저장소 접근</li>
+        <li>로그인·회원가입 및 이에 따른 개인정보</li>
+        <li>저장된 주소의 서버 백업 또는 동기화</li>
+    </ul>
+
+    <h2>6. 제3자 서비스의 개인정보처리방침</h2>
+    <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob 데이터 처리 안내</a></li>
+        <li><a href="https://www.kakao.com/policy/privacy" target="_blank" rel="noopener">카카오 개인정보처리방침</a> (우편번호 검색)</li>
+    </ul>
+
+    <h2>7. 수집 거부 및 데이터 삭제</h2>
+    <ul>
+        <li><strong>저장한 주소 삭제:</strong> 목록에서 항목을 길게 눌러 삭제하거나,
+            앱을 삭제하면 저장된 모든 주소가 함께 지워집니다.
+            안드로이드 설정 &gt; 애플리케이션 &gt; 주소보드 &gt; 저장공간에서
+            데이터를 지워도 동일합니다.</li>
+        <li><strong>광고 ID 거부:</strong> 안드로이드 설정 &gt; 개인정보 보호 &gt; 광고에서
+            광고 ID를 재설정하거나 삭제할 수 있습니다. 이 경우 맞춤형 광고가 아닌
+            일반 광고가 표시됩니다.</li>
+        <li><strong>주소 검색 전송 거부:</strong> 우편번호 검색을 사용하지 않고
+            주소를 직접 입력하면 외부로 전송되는 정보가 없습니다.</li>
+        <li><strong>플로팅 버튼 끄기:</strong> 앱 안에서 끄거나, 안드로이드 설정 &gt;
+            앱 &gt; 특수 액세스 &gt; 다른 앱 위에 표시에서 권한을 회수할 수 있습니다.</li>
+    </ul>
+
+    <h2>8. 아동 대상 여부</h2>
+    <p>앱은 만 13세 미만 아동을 주요 대상으로 하지 않으며, 아동으로부터
+       고의로 개인정보를 수집하지 않습니다.</p>
+
+    <h2>9. 문의</h2>
+    <ul>
+        <li><strong>성명:</strong> 송건호</li>
+        <li><strong>이메일:</strong> gunhosong@kakao.com</li>
+    </ul>
+
+    <p>본 방침은 법령 및 서비스 변경에 따라 수정될 수 있으며, 변경 시 본 페이지를
+       통해 고지합니다.</p>
+
+    <p><strong>시행일:</strong> 2026년 9월 9일</p>
+
+    <div class="en">
+        <h1>Privacy Policy</h1>
+        <p>This policy applies to the Android app <strong>주소보드 (AddressBoard)</strong>,
+           package <code>dev.wangmaac.addressboard</code>.</p>
+
+        <h2>1. Data stored only on your device</h2>
+        <p>The app stores the addresses you enter yourself (label, postal code,
+           street address, detail), your list order and your ad-removal purchase
+           state <strong>on your device only</strong>. There is no server. This data
+           is never transmitted, is not linked to any account, and is deleted when
+           you uninstall the app. No one, including the developer, can read the
+           addresses you save.</p>
+
+        <h2>2. Data sent when searching for an address</h2>
+        <p>The postal-code search screen embeds the Kakao (Daum) postcode service as
+           a web view. The <strong>search term you type</strong> is sent to that
+           service, along with the basic information any web request carries (such
+           as your IP address). Using or copying an address you already saved
+           involves no network communication.</p>
+
+        <h2>3. Data collected for advertising</h2>
+        <p>The app shows a banner ad on the list screen using Google AdMob, which may
+           use your device's Advertising ID to serve and measure ads. Category:
+           <em>Device or other IDs</em>. Ads are unrelated to the addresses you save;
+           those are never shared with advertisers or any third party. An in-app
+           purchase removes the banner.</p>
+
+        <h2>4. Overlay permission and clipboard</h2>
+        <p>The app uses the "display over other apps" permission
+           (<code>SYSTEM_ALERT_WINDOW</code>) and a foreground service solely to show
+           <strong>its own</strong> floating button. It cannot and does not read the
+           contents of other apps. The app only <strong>writes</strong> to the
+           clipboard — the address you tap — and never reads it.</p>
+
+        <h2>5. Not used</h2>
+        <p>No analytics, no crash reporting, no access to location, contacts, photos,
+           camera, microphone or external storage. No sign-in. No cloud backup or
+           sync of saved addresses.</p>
+
+        <h2>6. Third parties</h2>
+        <p>See the
+           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+           and the
+           <a href="https://www.kakao.com/policy/privacy" target="_blank" rel="noopener">Kakao Privacy Policy</a>.</p>
+
+        <h2>7. Opting out and deleting data</h2>
+        <p>Delete individual addresses by long-pressing them, or remove all local data
+           by uninstalling the app or clearing its storage in Android Settings. Reset
+           or delete your Advertising ID in Android Settings &gt; Privacy &gt; Ads.
+           Type an address manually to avoid the search request entirely. Turn the
+           floating button off in the app or revoke the overlay permission in
+           Android Settings.</p>
+
+        <h2>8. Children</h2>
+        <p>The app is not directed to children under 13 and does not knowingly collect
+           personal information from them.</p>
+
+        <h2>9. Contact</h2>
+        <p>Gunho Song — gunhosong@kakao.com</p>
+
+        <p><strong>Effective:</strong> 9 September 2026</p>
+    </div>
+</body>
+</html>
