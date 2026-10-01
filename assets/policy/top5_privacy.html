@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top5 — 개인정보처리방침</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; color: #333; max-width: 760px; }
+        h1, h2 { color: #1E2238; }
+        p, ul { margin-bottom: 1em; }
+        a { color: #1E2238; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; }
+        .en { color: #555; border-top: 1px solid #ddd; margin-top: 2.5em; padding-top: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>개인정보처리방침</h1>
+    <p>본 개인정보처리방침은 안드로이드 앱 <strong>Top5</strong>
+       (패키지명 <code>com.gunhosong.top_apps_widget</code>, 이하 "앱")에 적용됩니다.</p>
+
+    <p>앱은 회원가입을 요구하지 않으며, 사용자의 이름·이메일·전화번호 등
+       직접적인 개인 식별 정보를 <strong>수집하지 않습니다</strong>.
+       앱에는 자체 서버가 없습니다. 앱이 읽은 사용 기록은 <strong>기기 밖으로 나가지 않습니다</strong>.</p>
+
+    <h2>1. 「사용정보 접근」 권한으로 읽는 정보</h2>
+    <p>앱의 기능은 최근 가장 많이 쓴 앱 5개를 골라 홈 화면 위젯에 보여주는 것입니다.
+       이를 위해 안드로이드의 <strong>「사용정보 접근」(PACKAGE_USAGE_STATS)</strong>
+       권한이 필요하며, 이 권한은 사용자가 시스템 설정에서 직접 켜야 합니다.</p>
+    <p>이 권한으로 앱이 읽는 것은 다음과 같습니다.</p>
+    <ul>
+        <li>기기에 설치된 앱이 화면 앞으로 나오고 들어간 시각 (안드로이드가 기록해 둔 이벤트)</li>
+        <li>화면이 꺼진 시각</li>
+        <li>위 이벤트에 등장한 앱의 패키지명, 그리고 그 앱의 표시 이름과 아이콘</li>
+    </ul>
+    <p>읽은 이벤트는 <strong>기기 안에서 그 자리에서 계산</strong>되어 앱별 사용 시간과
+       순위로 바뀝니다. 원본 이벤트를 따로 보관하지 않고, 어디로도 전송하지 않습니다.
+       앱은 메시지·사진·연락처·통화 내용 등 <strong>다른 앱의 내용에는 접근할 수 없고
+       접근하지도 않습니다</strong> — 이 권한이 제공하는 것은 "언제 어떤 앱이 화면에
+       있었는가"뿐입니다.</p>
+
+    <h2>2. 기기 안에만 저장되는 정보</h2>
+    <p>앱은 다음을 <strong>사용자 기기 내부에만</strong> 저장하며 외부로 전송하지 않습니다.</p>
+    <ul>
+        <li>가장 많이 쓴 앱 5개의 패키지명과 사용 시간, 마지막 갱신 시각</li>
+        <li>집계 기간·갱신 주기 설정</li>
+        <li>평생 이용권 구매 여부</li>
+    </ul>
+    <p>이 정보는 계정과 연결되지 않으며, <strong>앱을 삭제하면 함께 삭제됩니다</strong>.
+       개발자를 포함한 누구도 열람할 수 없습니다.</p>
+
+    <h2>3. 결제 (Google Play)</h2>
+    <p>앱은 설치 후 7일 동안 무료로 쓸 수 있고, 이후에는 평생 이용권(1회 구매)이
+       필요합니다. 결제는 <strong>Google Play 결제 시스템</strong>이 처리합니다.
+       결제 수단·카드 정보·청구 주소 등은 Google 이 처리하며 앱은 이를 받지도,
+       볼 수도 없습니다. 앱이 Google Play 로부터 받는 것은 이용권 구매 여부와
+       구매 확인에 필요한 구매 토큰뿐이며, 이 정보도 개발자의 서버로 보내지 않습니다
+       (개발자 서버가 없습니다).</p>
+    <p>Google 의 개인정보 처리는
+       <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따릅니다.</p>
+
+    <h2>4. 수집하지 않는 것</h2>
+    <ul>
+        <li>분석·통계 도구 (Google Analytics, Firebase 등 일체 없음)</li>
+        <li>크래시 리포트 전송</li>
+        <li>광고 및 광고 식별자(Advertising ID) 이용</li>
+        <li>위치·연락처·사진·카메라·마이크·외부 저장소 접근</li>
+        <li>로그인 및 계정 연동</li>
+    </ul>
+
+    <h2>5. 그 외에 선언된 권한</h2>
+    <ul>
+        <li><code>com.android.vending.BILLING</code> · <code>INTERNET</code> —
+            Google Play 결제 라이브러리가 요구하는 권한입니다. 평생 이용권 구매와
+            구매 확인에만 쓰이며, <strong>사용 기록은 이 경로로 전송되지 않습니다.</strong></li>
+        <li><code>RECEIVE_BOOT_COMPLETED</code> · <code>FOREGROUND_SERVICE</code> ·
+            <code>WAKE_LOCK</code> · <code>ACCESS_NETWORK_STATE</code> —
+            홈 화면 위젯을 주기적으로 다시 계산하는 데 쓰는 안드로이드 작업 예약
+            라이브러리(WorkManager)가 요구하는 권한입니다. 기기를 다시 켜도 갱신 예약이
+            유지되게 합니다.</li>
+    </ul>
+
+    <h2>6. 제3자 제공</h2>
+    <p>앱은 어떤 정보도 제3자에게 제공하지 않습니다. 앱에 포함된 외부 SDK 는
+       Google Play 결제 라이브러리뿐입니다.</p>
+
+    <h2>7. 정보 삭제</h2>
+    <p>앱을 삭제하면 저장된 모든 정보가 함께 삭제됩니다.
+       앱을 지우지 않고 데이터만 지우려면 안드로이드 설정 &gt; 애플리케이션 &gt;
+       Top5 &gt; 저장공간에서 데이터를 삭제하면 됩니다.
+       「사용정보 접근」 권한은 설정 &gt; 애플리케이션 &gt; 특별한 접근 권한 &gt;
+       사용정보 접근에서 언제든 끌 수 있습니다.
+       구매한 평생 이용권은 앱을 다시 설치한 뒤 「구매 복원」으로 되살릴 수 있습니다.</p>
+
+    <h2>8. 아동</h2>
+    <p>앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를
+       고의로 수집하지 않습니다.</p>
+
+    <h2>9. 방침 변경</h2>
+    <p>내용이 바뀌면 이 페이지를 갱신하고 아래 시행일을 고칩니다.</p>
+
+    <h2>10. 문의</h2>
+    <p>송건호 — gunhosong@kakao.com</p>
+
+    <p><strong>시행일:</strong> 2026년 10월 1일</p>
+
+    <div class="en">
+        <h1>Privacy Policy</h1>
+        <p>This policy applies to the Android app <strong>Top5</strong>,
+           package <code>com.gunhosong.top_apps_widget</code>.</p>
+
+        <h2>1. What the Usage Access permission reads</h2>
+        <p>The app picks the five apps you used most recently and shows them in a
+           home-screen widget. This requires Android's <strong>Usage Access
+           (PACKAGE_USAGE_STATS)</strong> permission, which you must enable yourself
+           in system settings. The app reads when apps moved to and from the
+           foreground, when the screen turned off, and the package name, display
+           name and icon of the apps involved. These events are turned into per-app
+           usage time and a ranking <strong>on your device</strong> and are never
+           transmitted. The app cannot and does not access the contents of other apps.</p>
+
+        <h2>2. Data stored only on your device</h2>
+        <p>The top-five package names with their usage time, the last update time,
+           your period and refresh settings, and whether you bought the lifetime pass
+           are stored <strong>on your device only</strong>. They are not linked to any
+           account and are deleted when you uninstall the app.</p>
+
+        <h2>3. Payments (Google Play)</h2>
+        <p>The app is free for 7 days after installation; after that a one-time
+           lifetime pass is required. Payments are handled by <strong>Google Play
+           Billing</strong>. Your payment method and billing details are processed by
+           Google; the app never receives them. The app only receives whether you own
+           the pass and the purchase token needed to confirm it, and does not send
+           these anywhere (there is no developer server). See the
+           <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+        <h2>4. Not collected</h2>
+        <p>No analytics, crash reporting, advertising or advertising IDs. No location,
+           contacts, photos, camera, microphone or external storage access. No sign-in.</p>
+
+        <h2>5. Other permissions declared</h2>
+        <p><code>com.android.vending.BILLING</code> and <code>INTERNET</code> are
+           required by the Google Play Billing library and are used only to buy and
+           confirm the lifetime pass — <strong>usage data is never sent this way</strong>.
+           <code>RECEIVE_BOOT_COMPLETED</code>, <code>FOREGROUND_SERVICE</code>,
+           <code>WAKE_LOCK</code> and <code>ACCESS_NETWORK_STATE</code> are required by
+           WorkManager to refresh the widget periodically and keep that schedule
+           after a restart.</p>
+
+        <h2>6. Third parties</h2>
+        <p>No data is shared with third parties. The only external SDK is the
+           Google Play Billing library.</p>
+
+        <h2>7. Deleting data</h2>
+        <p>Uninstalling the app deletes everything it stored. You can also clear its
+           storage in Android Settings and revoke Usage Access at any time in
+           Settings &gt; Apps &gt; Special app access &gt; Usage access. A purchased
+           pass can be restored after reinstalling with "Restore purchase".</p>
+
+        <h2>8. Children</h2>
+        <p>The app is not directed to children under 13 and does not knowingly
+           collect personal information from them.</p>
+
+        <h2>9. Contact</h2>
+        <p>Gunho Song — gunhosong@kakao.com</p>
+
+        <p><strong>Effective:</strong> 1 October 2026</p>
+    </div>
+</body>
+</html>
