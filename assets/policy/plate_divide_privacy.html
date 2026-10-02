@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>번호판 나누기 — 개인정보처리방침</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; color: #333; max-width: 760px; }
+        h1, h2 { color: #0056b3; }
+        p, ul { margin-bottom: 1em; }
+        a { color: #0056b3; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; }
+        .en { color: #555; border-top: 1px solid #ddd; margin-top: 2.5em; padding-top: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>개인정보처리방침</h1>
+    <p>본 개인정보처리방침은 안드로이드 앱 <strong>번호판 나누기</strong>
+       (패키지명 <code>com.todayplate.divide</code>, 이하 "앱")에 적용됩니다.
+       앱은 회원가입을 요구하지 않으며, 사용자의 <strong>이름·이메일·전화번호 등
+       직접적인 개인 식별 정보를 수집하지 않습니다</strong>.</p>
+
+    <h2>1. 기기 안에만 저장되는 정보</h2>
+    <p>다음 정보는 사용자 기기 내부에만 저장되며, 앱을 삭제하면 함께 삭제됩니다.</p>
+    <ul>
+        <li>날짜별 진행 기록(그날 다섯 대의 입력과 결과), 하트·점수·당시 순위</li>
+        <li>소리·등장 연출 표시 여부 등 앱 설정</li>
+    </ul>
+
+    <h2>2. 오늘 순위를 위해 서버로 보내는 정보</h2>
+    <p>모든 사용자가 같은 날 같은 문제로 겨루는 "오늘 순위"를 위해, 하루 다섯 대를 마치면 다음 정보를 순위 서버로 보냅니다.</p>
+    <ul>
+        <li><strong>설치 번호</strong>: 앱을 처음 실행할 때 기기 안에서 만드는 무작위 번호입니다.
+            이름·전화번호·기기 고유번호와 관련이 없으며, 서버에는 원래 번호가 아니라
+            되돌릴 수 없는 해시값(SHA-256)만 저장합니다.</li>
+        <li><strong>그날의 풀이 기록과 점수</strong>: 입력한 수와 그 시각. 서버가 기록을 다시 계산해 점수를 확정합니다.</li>
+    </ul>
+    <ul>
+        <li>목적: 오늘 순위·참가 인원·누적 점수 표시, 점수 위조 방지</li>
+        <li>처리 위치: Cloudflare(서버 운영 위탁). 전송 구간은 HTTPS로 암호화합니다.</li>
+        <li>순위표에는 순위와 점수만 표시되며 다른 사용자에게 이름이나 번호가 보이지 않습니다.</li>
+        <li>보관: 서비스 운영 기간 동안 보관합니다. 기록은 개인을 식별할 수 없는 해시와 점수로만 저장되어
+            특정인의 기록을 골라 찾을 수 없습니다. 앱 데이터를 지우면 새 설치 번호가 만들어져
+            이전 기록과의 연결이 끊어집니다.</li>
+    </ul>
+
+    <h2>3. 광고를 위해 수집되는 정보</h2>
+    <p>앱은 결과 화면에서 사용자가 직접 버튼을 눌러 시청하는 <strong>보상형 광고</strong>에 한해
+       Google AdMob 을 사용합니다. 이 과정에서 Google 이 광고 게재·광고 성과 측정·부정 방지를 위해
+       다음 정보를 수집할 수 있습니다.</p>
+    <ul>
+        <li>기기 또는 기타 ID(광고 ID 등), IP 주소(대략적인 위치), 광고와의 상호작용, 진단 정보</li>
+        <li>처리 주체: Google AdMob</li>
+    </ul>
+    <p>게임 중에는 광고가 나오지 않으며, 광고를 시청하지 않아도 게임의 모든 기능을 사용할 수 있습니다.
+       광고로 받은 보너스 번호판은 점수와 순위에 들어가지 않습니다.</p>
+
+    <h2>4. 사용하지 않는 것</h2>
+    <ul>
+        <li>사용자 분석 도구(Analytics), 충돌 보고 도구(Crash Reporting)</li>
+        <li>정확한 위치 정보, 연락처, 사진, 카메라, 마이크, 저장소 접근</li>
+        <li>로그인·회원가입 및 이에 따른 개인정보</li>
+    </ul>
+
+    <h2>5. 제3자 서비스의 개인정보처리방침</h2>
+    <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob 데이터 처리 안내</a></li>
+        <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare 개인정보처리방침</a></li>
+    </ul>
+
+    <h2>6. 수집 거부 및 데이터 삭제</h2>
+    <ul>
+        <li><strong>광고 ID 거부:</strong> 안드로이드 설정 &gt; 개인정보 보호 &gt; 광고에서
+            광고 ID를 재설정하거나 삭제할 수 있습니다.</li>
+        <li><strong>기기 내 데이터 삭제:</strong> 앱을 삭제하거나
+            안드로이드 설정 &gt; 애플리케이션 &gt; 번호판 나누기 &gt; 저장공간에서 데이터를 지우면
+            기기 안의 기록과 설치 번호가 삭제됩니다.</li>
+        <li><strong>순위 참여를 원하지 않는 경우:</strong> 하루 다섯 대를 마칠 때 결과가 순위 서버로 전송되므로,
+            원하지 않으면 앱을 사용하지 않거나 기기를 오프라인으로 두고 이용해 주세요(이 경우 순위는 표시되지 않습니다).</li>
+    </ul>
+
+    <h2>7. 아동 대상 여부</h2>
+    <p>앱은 만 13세 미만 아동을 주요 대상으로 하지 않으며, 아동으로부터 고의로 개인정보를 수집하지 않습니다.</p>
+
+    <h2>8. 문의</h2>
+    <ul>
+        <li>성명: 송건호</li>
+        <li>이메일: <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a></li>
+    </ul>
+    <p>본 방침은 법령 및 서비스 변경에 따라 수정될 수 있으며, 변경 시 본 페이지를 통해 고지합니다.</p>
+    <p>시행일: 2026년 10월 2일</p>
+
+    <div class="en">
+        <h1>Privacy Policy</h1>
+        <p>This policy applies to the Android app <strong>번호판 나누기 (Plate Divide)</strong>,
+           package <code>com.todayplate.divide</code>. No sign-up is required and the app does not collect
+           your name, email or phone number.</p>
+        <h2>1. Data stored only on your device</h2>
+        <p>Daily progress (inputs and results), hearts, scores, past ranks and app settings are stored on your
+           device and deleted when you uninstall the app.</p>
+        <h2>2. Data sent for the daily ranking</h2>
+        <p>When you finish the day's five plates, the app sends an <strong>install ID</strong> (a random number created
+           on your device, stored on the server only as an irreversible SHA-256 hash) and that day's
+           <strong>play log and score</strong> to the ranking server (operated on Cloudflare, encrypted in transit).
+           The server re-computes the score to prevent tampering. Other users only see ranks and scores. Records are
+           kept while the service runs; they cannot be linked to a person, and clearing app data creates a new install ID.</p>
+        <h2>3. Data collected for advertising</h2>
+        <p>The app uses Google AdMob only for <strong>rewarded ads you choose to watch</strong> on the result screen.
+           Google may collect device or other IDs (such as the Advertising ID), IP address (approximate location),
+           ad interactions and diagnostics for advertising, measurement and fraud prevention. No ads appear during play,
+           and bonus plates from ads do not count toward scores or ranks.</p>
+        <h2>4. Not used</h2>
+        <p>No analytics, no crash reporting, no precise location, contacts, photos, camera, microphone or storage access.
+           No sign-in.</p>
+        <h2>5. Third parties</h2>
+        <p>See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+           and the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>
+        <h2>6. Your choices</h2>
+        <p>Reset or delete the Advertising ID in Android Settings &gt; Privacy &gt; Ads. Clear the app's data or uninstall
+           it to delete on-device records and the install ID.</p>
+        <h2>7. Children</h2>
+        <p>The app is not directed to children under 13 and does not knowingly collect their personal information.</p>
+        <h2>8. Contact</h2>
+        <p>Gunho Song — <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a>. Effective: October 2, 2026.</p>
+    </div>
+</body>
+</html>
