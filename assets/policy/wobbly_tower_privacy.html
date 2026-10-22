@@ -45,13 +45,13 @@
     <ul>
         <li>목적: 하루 판 수 관리, 주간 순위·참가 인원 표시, 점수 위조와 과도한 요청 방지</li>
         <li>처리 위치: Cloudflare(서버 운영 위탁). 전송 구간은 HTTPS로 암호화합니다.</li>
-        <li>보관: 서비스 운영 기간 동안 보관합니다(IP 주소 제외). 기록은 해시값과 자동 이름으로만 저장되어
+        <li>보관: 서비스 운영 기간 동안 보관합니다(IP 주소 제외). 구매 기록을 뺀 기록은 해시값과 자동 이름으로만 저장되어
             특정인의 기록을 골라 찾을 수 없습니다. 앱 데이터를 지우거나 다시 설치하면 새 설치 번호와 새 이름이 만들어져
             이전 기록과의 연결이 끊어집니다.</li>
     </ul>
 
     <h2>3. 광고를 위해 수집되는 정보</h2>
-    <p>앱은 그날의 무료 판을 다 쓴 뒤 사용자가 직접 "광고 보고 1판 더"를 눌러 시청하는 <strong>보상형 광고</strong>에 한해
+    <p>앱은 그날의 무료 판을 다 쓴 뒤 사용자가 직접 "광고 보고 2판 더"를 눌러 시청하는 <strong>보상형 광고</strong>에 한해
        Google AdMob 을 사용합니다. 이 과정에서 Google 이 광고 게재·광고 성과 측정·부정 방지를 위해
        다음 정보를 수집할 수 있습니다.</p>
     <ul>
@@ -119,9 +119,9 @@
            used only to verify the purchase and apply refunds; we never receive payment details such as card numbers); and your
            <strong>IP address</strong>, used only to block request floods and deleted automatically after a few minutes.
            The server runs on Cloudflare and traffic is encrypted. Records other than IP addresses are kept while the service runs;
-           they cannot be linked to a person. Clearing app data or reinstalling creates a new install ID and name.</p>
+           apart from purchase records (kept only to confirm the purchase and apply refunds), they are not tied to your name or contact details. Clearing app data or reinstalling creates a new install ID and name.</p>
         <h2>3. Data collected for advertising</h2>
-        <p>The app uses Google AdMob only for <strong>rewarded ads you choose to watch</strong> by tapping "Watch an ad for 1 more"
+        <p>The app uses Google AdMob only for <strong>rewarded ads you choose to watch</strong> by tapping "Watch an ad for 2 more"
            after using up the day's free plays. Google may collect device or other IDs (such as the Advertising ID), IP address
            (approximate location), ad interactions and diagnostics for advertising, measurement and fraud prevention.
            No ads appear during play, and you can keep playing with the daily free plays without watching ads.</p>
@@ -161,10 +161,10 @@
            <strong>1日の利用記録</strong>(その日に始めた回数、広告で得た回数と広告の開始・報酬時刻、名前を変えた回数)、
            <strong>購入記録</strong>(「広告なし・無制限」の購入時に Google Play が発行する購入トークンと注文番号。購入の確認と払い戻しの反映にのみ使い、カード番号などの決済情報は受け取りません)、
            そして<strong>IP アドレス</strong>(短時間の過剰なアクセスを防ぐためだけに使い、数分後に自動で削除)。
-           サーバーは Cloudflare で運用し、通信は暗号化されます。IP アドレス以外の記録はサービス運営期間中保存され、個人とは結び付けられません。
+           サーバーは Cloudflare で運用し、通信は暗号化されます。IP アドレス以外の記録はサービス運営期間中保存されます。購入記録(購入の確認と払い戻しの反映にのみ使用)を除き、氏名や連絡先とは結び付けられません。
            アプリのデータを消去するか再インストールすると、新しいインストール番号と名前が作られます。</p>
         <h2>3. 広告のために収集される情報</h2>
-        <p>本アプリは、その日の無料プレイを使い切ったあと利用者が自分で「広告を見てもう1回」を押して視聴する<strong>リワード広告</strong>にのみ Google AdMob を使用します。
+        <p>本アプリは、その日の無料プレイを使い切ったあと利用者が自分で「広告を見てもう2回」を押して視聴する<strong>リワード広告</strong>にのみ Google AdMob を使用します。
            Google は広告配信・効果測定・不正防止のため、端末やその他の ID(広告 ID など)、IP アドレス(おおよその位置)、
            広告とのやり取り、診断情報を収集することがあります。プレイ中に広告は表示されず、広告を見なくても毎日の無料プレイで遊べます。</p>
         <p><strong>欧州経済領域(EEA)・英国・スイスの利用者</strong>には、Google の同意管理ツール(User Messaging Platform)で
