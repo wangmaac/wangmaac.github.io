@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아슬아슬 다리 놓기 (Wobbly Bridge) — 개인정보처리방침 · Privacy Policy · プライバシーポリシー</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; color: #333; max-width: 760px; }
+        h1, h2 { color: #0056b3; }
+        p, ul { margin-bottom: 1em; }
+        a { color: #0056b3; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; }
+        .en, .ja { color: #555; border-top: 1px solid #ddd; margin-top: 2.5em; padding-top: 1.5em; }
+        nav a { margin-right: 1em; }
+    </style>
+</head>
+<body>
+    <nav><a href="#ko">한국어</a><a href="#en">English</a><a href="#ja">日本語</a></nav>
+    <h1 id="ko">개인정보처리방침</h1>
+    <p>본 개인정보처리방침은 안드로이드 앱 <strong>아슬아슬 다리 놓기</strong>
+       (Wobbly Bridge, 패키지명 <code>com.ghsong.wobbly_bridge</code>, 이하 "앱")에 적용됩니다.
+       앱은 회원가입·로그인을 요구하지 않으며, 사용자의 <strong>이름·이메일·전화번호 등
+       직접적인 개인 식별 정보를 수집하지 않습니다</strong>.</p>
+
+    <h2>1. 기기 안에만 저장되는 정보</h2>
+    <p>다음 정보는 사용자 기기 내부에만 저장되며, 앱을 삭제하면 함께 삭제됩니다.</p>
+    <ul>
+        <li>설치 번호(아래 2항)와 서버 접속 증표(세션)</li>
+        <li>소리 켜기/끄기, 고른 화면 언어 등 앱 설정</li>
+    </ul>
+
+    <h2>2. 판 수와 주간 순위를 위해 서버로 보내는 정보</h2>
+    <p>하루 무료 판 수를 세고 모든 사용자가 겨루는 "주간 순위"를 만들기 위해 다음 정보를 서버로 보내고 저장합니다.</p>
+    <ul>
+        <li><strong>설치 번호</strong>: 앱을 처음 실행할 때 기기 안에서 만드는 무작위 번호입니다.
+            이름·전화번호·기기 고유번호와 관련이 없으며, 서버에는 원래 번호가 아니라
+            되돌릴 수 없는 해시값(SHA-256)만 저장합니다.</li>
+        <li><strong>자동으로 만든 이름</strong>: 서버가 정해진 단어 목록에서 골라 붙이는 이름(예: "용감한 빨강판다")입니다.
+            사용자가 직접 글을 입력하지 않으며, 순위표에서 다른 사용자에게 보입니다.</li>
+        <li><strong>판 기록</strong>: 판을 시작하고 끝낸 시각, 점수, 이번 주 최고 기록과 역대 최고 기록</li>
+        <li><strong>하루 이용 기록</strong>: 그날 시작한 판 수, 광고를 보고 받은 판 수와 광고 시작·보상 시각, 이름을 바꾼 횟수</li>
+        <li><strong>IP 주소</strong>: 짧은 시간에 몰리는 과도한 접속을 막는 데에만 쓰며, 몇 분 뒤 자동으로 지웁니다.</li>
+    </ul>
+    <ul>
+        <li>목적: 하루 판 수 관리, 주간 순위·참가 인원 표시, 점수 위조와 과도한 요청 방지</li>
+        <li>처리 위치: Cloudflare(서버 운영 위탁). 전송 구간은 HTTPS로 암호화합니다.</li>
+        <li>보관: 서비스 운영 기간 동안 보관합니다(IP 주소 제외). 기록은 해시값과 자동 이름으로만 저장되어
+            특정인의 기록을 골라 찾을 수 없습니다. 앱 데이터를 지우거나 다시 설치하면 새 설치 번호와 새 이름이 만들어져
+            이전 기록과의 연결이 끊어집니다.</li>
+    </ul>
+
+    <h2>3. 광고를 위해 수집되는 정보</h2>
+    <p>앱은 그날의 무료 판을 다 쓴 뒤 사용자가 직접 "광고 보고 1판 더"를 눌러 시청하는 <strong>보상형 광고</strong>에 한해
+       Google AdMob 을 사용합니다. 이 과정에서 Google 이 광고 게재·광고 성과 측정·부정 방지를 위해
+       다음 정보를 수집할 수 있습니다.</p>
+    <ul>
+        <li>기기 또는 기타 ID(광고 ID 등), IP 주소(대략적인 위치), 광고와의 상호작용, 진단 정보</li>
+        <li>처리 주체: Google AdMob</li>
+    </ul>
+    <p>게임 중에는 광고가 나오지 않으며, 광고를 시청하지 않아도 매일 무료 판으로 게임을 이용할 수 있습니다.</p>
+    <p><strong>유럽경제지역(EEA)·영국·스위스 사용자</strong>에게는 Google 의 동의 관리 도구(User Messaging Platform)로
+       광고를 위한 개인정보 처리에 대한 동의를 먼저 묻고, 그 선택에 따라서만 광고를 요청합니다.
+       선택은 앱 시작 화면의 <strong>광고 개인정보 설정</strong>에서 언제든 바꿀 수 있습니다.
+       동의하지 않아도 게임은 그대로 이용할 수 있으며, 이 경우 맞춤형 광고가 표시되지 않거나 광고가 표시되지 않을 수 있습니다.</p>
+
+    <h2>4. 사용하지 않는 것</h2>
+    <ul>
+        <li>사용자 분석 도구(Analytics), 충돌 보고 도구(Crash Reporting)</li>
+        <li>정확한 위치 정보, 연락처, 사진, 카메라, 마이크, 저장소 접근</li>
+        <li>로그인·회원가입 및 이에 따른 개인정보, 사용자가 직접 입력한 글</li>
+    </ul>
+
+    <h2>5. 제3자 서비스의 개인정보처리방침</h2>
+    <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob 데이터 처리 안내</a></li>
+        <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare 개인정보처리방침</a></li>
+    </ul>
+
+    <h2>6. 수집 거부 및 데이터 삭제</h2>
+    <ul>
+        <li><strong>광고 ID 거부:</strong> 안드로이드 설정 &gt; 개인정보 보호 &gt; 광고에서
+            광고 ID를 재설정하거나 삭제할 수 있습니다.</li>
+        <li><strong>광고 동의 변경(EEA·영국·스위스):</strong> 앱 시작 화면의 광고 개인정보 설정에서 바꿀 수 있습니다.</li>
+        <li><strong>기기 내 데이터 삭제:</strong> 앱을 삭제하거나
+            안드로이드 설정 &gt; 애플리케이션 &gt; 아슬아슬 다리 놓기 &gt; 저장공간에서 데이터를 지우면
+            기기 안의 설치 번호와 설정이 삭제됩니다.</li>
+        <li><strong>서버 기록:</strong> 판 수와 순위는 서버가 관리하므로 앱은 인터넷 연결이 있어야 게임을 시작할 수 있습니다.
+            서버 기록 삭제를 원하면 아래 이메일로 문의해 주세요. 다만 기록이 개인을 식별할 수 없는 형태로만 저장되어
+            요청한 분의 기록을 특정하지 못할 수 있습니다.</li>
+    </ul>
+
+    <h2>7. 아동 대상 여부</h2>
+    <p>앱은 만 13세 미만 아동을 주요 대상으로 하지 않으며, 아동으로부터 고의로 개인정보를 수집하지 않습니다.</p>
+
+    <h2>8. 문의</h2>
+    <ul>
+        <li>성명: 송건호</li>
+        <li>이메일: <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a></li>
+    </ul>
+    <p>본 방침은 법령 및 서비스 변경에 따라 수정될 수 있으며, 변경 시 본 페이지를 통해 고지합니다.</p>
+    <p>시행일: 2026년 10월 22일</p>
+
+    <div class="en">
+        <h1 id="en">Privacy Policy</h1>
+        <p>This policy applies to the Android app <strong>Wobbly Bridge (아슬아슬 다리 놓기)</strong>,
+           package <code>com.ghsong.wobbly_bridge</code>. No sign-up or login is required and the app does not collect
+           your name, email or phone number.</p>
+        <h2>1. Data stored only on your device</h2>
+        <p>Your install ID (see 2), a server session token and app settings (sound on/off, chosen language) are stored on your
+           device and deleted when you uninstall the app.</p>
+        <h2>2. Data sent for daily plays and the weekly ranking</h2>
+        <p>To count free plays and run the weekly ranking, the app sends and the server stores:
+           an <strong>install ID</strong> (a random number created on your device, stored on the server only as an irreversible SHA-256 hash);
+           an <strong>auto-generated name</strong> picked by the server from fixed word lists (e.g. "Brave Red Panda" — you never type it,
+           and other players see it on the ranking); <strong>game records</strong> (start and end times, score, weekly and all-time best);
+           <strong>daily usage</strong> (plays started, plays earned from ads with ad start and reward times, name changes); and your
+           <strong>IP address</strong>, used only to block request floods and deleted automatically after a few minutes.
+           The server runs on Cloudflare and traffic is encrypted. Records other than IP addresses are kept while the service runs;
+           they cannot be linked to a person. Clearing app data or reinstalling creates a new install ID and name.</p>
+        <h2>3. Data collected for advertising</h2>
+        <p>The app uses Google AdMob only for <strong>rewarded ads you choose to watch</strong> by tapping "Watch an ad for 1 more"
+           after using up the day's free plays. Google may collect device or other IDs (such as the Advertising ID), IP address
+           (approximate location), ad interactions and diagnostics for advertising, measurement and fraud prevention.
+           No ads appear during play, and you can keep playing with the daily free plays without watching ads.</p>
+        <p>Users in the <strong>European Economic Area, the UK and Switzerland</strong> are first asked for consent through
+           Google's User Messaging Platform, and ads are requested only as that choice allows. You can change your choice at any
+           time with <strong>Ad privacy settings</strong> on the title screen. The game works the same without consent;
+           ads may then be non-personalized or not shown.</p>
+        <h2>4. Not used</h2>
+        <p>No analytics, no crash reporting, no precise location, contacts, photos, camera, microphone or storage access.
+           No sign-in and no text typed by users.</p>
+        <h2>5. Third parties</h2>
+        <p>See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+           and the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>
+        <h2>6. Your choices</h2>
+        <p>Reset or delete the Advertising ID in Android Settings &gt; Privacy &gt; Ads. In the EEA, the UK and Switzerland,
+           change your ad consent with Ad privacy settings on the title screen. Clear the app's data or uninstall it to delete
+           the on-device install ID and settings. To ask for server records to be deleted, email us below; since records are stored
+           in a form that does not identify you, we may not be able to find yours.</p>
+        <h2>7. Children</h2>
+        <p>The app is not directed to children under 13 and does not knowingly collect their personal information.</p>
+        <h2>8. Contact</h2>
+        <p>Gunho Song — <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a>. Effective: October 22, 2026.</p>
+    </div>
+
+    <div class="ja" lang="ja">
+        <h1 id="ja">プライバシーポリシー</h1>
+        <p>本ポリシーは Android アプリ <strong>ぐらぐらブリッジ (Wobbly Bridge / 아슬아슬 다리 놓기)</strong>
+           (パッケージ名 <code>com.ghsong.wobbly_bridge</code>)に適用されます。会員登録・ログインは不要で、氏名・メールアドレス・電話番号などを収集しません。</p>
+        <h2>1. 端末内にのみ保存される情報</h2>
+        <p>インストール番号(下記2)、サーバー接続用のセッション、アプリ設定(サウンドのオン/オフ・選んだ言語)は端末内にのみ保存され、
+           アプリを削除すると一緒に削除されます。</p>
+        <h2>2. プレイ回数と週間ランキングのために送信する情報</h2>
+        <p>1日の無料プレイ回数を数え、週間ランキングを作るため、次の情報をサーバーへ送信・保存します。
+           <strong>インストール番号</strong>(端末内で作る無作為な番号。サーバーには元に戻せない SHA-256 ハッシュのみ保存)、
+           <strong>自動で作られた名前</strong>(サーバーが決まった単語リストから選ぶ名前。例:「勇敢な赤パンダ」。利用者が文字を入力することはなく、ランキングで他の利用者に表示されます)、
+           <strong>プレイ記録</strong>(開始・終了時刻、スコア、今週の最高記録と歴代最高記録)、
+           <strong>1日の利用記録</strong>(その日に始めた回数、広告で得た回数と広告の開始・報酬時刻、名前を変えた回数)、
+           そして<strong>IP アドレス</strong>(短時間の過剰なアクセスを防ぐためだけに使い、数分後に自動で削除)。
+           サーバーは Cloudflare で運用し、通信は暗号化されます。IP アドレス以外の記録はサービス運営期間中保存され、個人とは結び付けられません。
+           アプリのデータを消去するか再インストールすると、新しいインストール番号と名前が作られます。</p>
+        <h2>3. 広告のために収集される情報</h2>
+        <p>本アプリは、その日の無料プレイを使い切ったあと利用者が自分で「広告を見てもう1回」を押して視聴する<strong>リワード広告</strong>にのみ Google AdMob を使用します。
+           Google は広告配信・効果測定・不正防止のため、端末やその他の ID(広告 ID など)、IP アドレス(おおよその位置)、
+           広告とのやり取り、診断情報を収集することがあります。プレイ中に広告は表示されず、広告を見なくても毎日の無料プレイで遊べます。</p>
+        <p><strong>欧州経済領域(EEA)・英国・スイスの利用者</strong>には、Google の同意管理ツール(User Messaging Platform)で
+           広告のための個人情報の取り扱いへの同意を先に確認し、その選択に従ってのみ広告をリクエストします。
+           選択はタイトル画面の<strong>広告のプライバシー設定</strong>でいつでも変更できます。同意しなくてもゲームはそのまま遊べます
+           (その場合、パーソナライズされていない広告が表示されるか、広告が表示されないことがあります)。</p>
+        <h2>4. 使用しないもの</h2>
+        <p>アクセス解析、クラッシュレポート、正確な位置情報、連絡先、写真、カメラ、マイク、ストレージへのアクセス、ログイン、利用者が入力する文章は使用しません。</p>
+        <h2>5. 第三者サービス</h2>
+        <p><a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google プライバシーポリシー</a>、
+           <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare プライバシーポリシー</a>をご覧ください。</p>
+        <h2>6. 選択と削除</h2>
+        <p>広告 ID は Android の設定 &gt; プライバシー &gt; 広告 でリセット・削除できます。EEA・英国・スイスでは、
+           タイトル画面の広告のプライバシー設定で広告への同意を変更できます。アプリのデータを消去するかアプリを削除すると、
+           端末内のインストール番号と設定が削除されます。サーバーの記録の削除を希望する場合は下記メールへご連絡ください。
+           ただし記録は個人を特定できない形でのみ保存されるため、ご本人の記録を特定できない場合があります。</p>
+        <h2>7. 子どもについて</h2>
+        <p>本アプリは13歳未満の子どもを主な対象としておらず、子どもの個人情報を意図的に収集しません。</p>
+        <h2>8. お問い合わせ</h2>
+        <p>ソン・ゴンホ(Gunho Song) — <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a>。施行日: 2026年10月22日。</p>
+    </div>
+</body>
+</html>
