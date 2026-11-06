@@ -53,6 +53,12 @@
             <td>오프라인 열람과 화면 유지, 검색창 재입력 편의</td>
             <td>기기 내부에만</td>
         </tr>
+        <tr>
+            <td>사용 통계<br><small>(어느 화면을 열었는지, 검색·저장·알림 설정을 썼는지와
+                Google이 자동 수집하는 기기 모델·OS 버전·대략적 지역·앱 인스턴스 ID)</small></td>
+            <td>어느 기능이 실제로 쓰이는지 파악해 앱을 개선하기 위해</td>
+            <td>Google Firebase Analytics</td>
+        </tr>
     </table>
     <p>서버에 저장되는 항목(기기 식별자와 그 인증값·푸시 토큰·알림 키워드)은
        <strong>Cloudflare</strong>의 서버리스 환경(Workers·D1 데이터베이스)에
@@ -72,13 +78,25 @@
     </ul>
     <p>기사·공고 상세 화면에는 광고를 표시하지 않습니다.</p>
 
-    <h2>3. 뉴스·시청 콘텐츠에 대하여</h2>
+    <h2>3. 사용 통계</h2>
+    <p>앱은 <strong>Google Firebase Analytics</strong>로 익명 사용 통계를 모읍니다.
+       어느 화면이 얼마나 열리는지, 검색·글 저장·알림 설정 같은 기능이 쓰이는지를
+       집계하기 위한 것입니다.</p>
+    <ul>
+        <li>보내는 것: 화면 이름, 행동 이름과 그 분류(뉴스/시청/도서관), 알림 토픽 이름</li>
+        <li><strong>보내지 않는 것: 검색어, 기사 제목·내용, 저장한 글 목록, 이름·이메일·전화번호</strong></li>
+        <li>Google이 함께 수집하는 항목: 기기 모델·OS 버전·대략적 지역(국가 수준)·앱 인스턴스 ID</li>
+        <li>처리 주체: Google (Firebase Analytics)</li>
+    </ul>
+    <p>앱 <strong>설정 &gt; 사용 통계 보내기</strong>를 끄면 그 시점부터 전송하지 않습니다.</p>
+
+    <h2>4. 뉴스·시청 콘텐츠에 대하여</h2>
     <p>앱은 거제 지역 언론사의 RSS와 거제시청 홈페이지의 공개 게시글 <strong>제목·요약·
        원문 링크</strong>만 모아 보여줍니다. 기사 본문은 저장·복제하지 않으며, 상세 화면은
        각 언론사·거제시청의 원문 페이지를 그대로 엽니다. 원문 페이지에서의 정보 처리는
        해당 사이트의 방침을 따릅니다.</p>
 
-    <h2>4. 보유 기간과 삭제</h2>
+    <h2>5. 보유 기간과 삭제</h2>
     <ul>
         <li><strong>기기 내부 정보:</strong> 앱을 삭제하거나
             안드로이드 설정 &gt; 애플리케이션 &gt; 올거제 &gt; 저장공간에서 데이터를 지우면
@@ -93,37 +111,40 @@
             서버에 저장된 해당 기기의 정보를 지체 없이 삭제합니다.</li>
     </ul>
 
-    <h2>5. 사용하지 않는 것</h2>
+    <h2>6. 사용하지 않는 것</h2>
     <p>앱은 다음을 사용하지 않습니다.</p>
     <ul>
-        <li>사용자 분석 도구(Analytics), 충돌 보고 도구(Crash Reporting)</li>
+        <li>충돌 보고 도구(Crash Reporting)</li>
         <li>위치 정보, 연락처, 사진, 카메라, 마이크, 저장소 접근</li>
         <li>로그인·회원가입 및 이에 따른 개인정보</li>
     </ul>
 
-    <h2>6. 제3자 서비스</h2>
+    <h2>7. 제3자 서비스</h2>
     <p>앱은 다음 사업자의 서비스를 이용하며, 각 사업자가 처리하는 정보는 해당 방침을 따릅니다.</p>
     <ul>
-        <li><strong>Google</strong> — 광고(AdMob), 푸시 알림(Firebase Cloud Messaging):
+        <li><strong>Google</strong> — 광고(AdMob), 푸시 알림(Firebase Cloud Messaging),
+            사용 통계(Firebase Analytics):
             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>,
             <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob 데이터 처리 안내</a></li>
         <li><strong>Cloudflare</strong> — 서버(Workers)·데이터베이스(D1):
             <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a></li>
     </ul>
 
-    <h2>7. 수집 거부</h2>
+    <h2>8. 수집 거부</h2>
     <ul>
         <li><strong>알림:</strong> 앱 내 알림 화면에서 모든 카테고리·키워드를 끄거나,
             안드로이드 설정에서 앱의 알림 권한을 거부할 수 있습니다.</li>
+        <li><strong>사용 통계:</strong> 앱 내 설정 화면에서 <strong>사용 통계 보내기</strong>를
+            끄면 그 시점부터 전송하지 않습니다.</li>
         <li><strong>광고 ID:</strong> 안드로이드 설정 &gt; 개인정보 보호 &gt; 광고에서
             광고 ID를 재설정하거나 삭제할 수 있습니다. 이 경우 맞춤형이 아닌 일반 광고가 표시됩니다.</li>
     </ul>
 
-    <h2>8. 아동 대상 여부</h2>
+    <h2>9. 아동 대상 여부</h2>
     <p>앱은 만 13세 미만 아동을 주요 대상으로 하지 않으며, 아동으로부터
        고의로 개인정보를 수집하지 않습니다.</p>
 
-    <h2>9. 문의</h2>
+    <h2>10. 문의</h2>
     <ul>
         <li><strong>성명:</strong> 송건호</li>
         <li><strong>이메일:</strong> gunhosong@kakao.com</li>
@@ -132,7 +153,9 @@
     <p>본 방침은 법령 및 서비스 변경에 따라 수정될 수 있으며, 변경 시 본 페이지를
        통해 고지합니다.</p>
 
-    <p><strong>시행일:</strong> 2026년 9월 22일</p>
+    <p><strong>시행일:</strong> 2026년 11월 6일 (최초 시행 2026년 9월 22일)</p>
+    <p style="font-size:13px"><strong>2026년 11월 6일 개정:</strong> 사용 통계(Firebase
+       Analytics) 수집을 추가하고, 앱 설정에서 끄는 방법을 함께 안내합니다.</p>
 
     <div class="en">
         <h1>Privacy Policy</h1>
@@ -155,12 +178,22 @@
            your device's Advertising ID to serve and measure ads. Category: <em>Device
            or other IDs</em>. No ads are shown on article detail pages.</p>
 
-        <h2>3. Content</h2>
+        <h2>3. Usage analytics</h2>
+        <p>The app uses <strong>Google Firebase Analytics</strong> to count anonymous
+           usage: which screens are opened and whether features such as search,
+           bookmarking and notification settings are used. We send screen names,
+           action names and their category. <strong>We do not send search terms,
+           article titles or bodies, your bookmark list, or any name, e-mail address
+           or phone number.</strong> Google also collects device model, OS version,
+           coarse (country-level) region and an app instance ID. You can turn this off
+           at any time in <strong>Settings &gt; 사용 통계 보내기</strong>.</p>
+
+        <h2>4. Content</h2>
         <p>The app aggregates titles, summaries and links from local news RSS feeds and
            the Geoje City website, and opens the original page for the full text. It
            never stores or copies article bodies.</p>
 
-        <h2>4. Retention and deletion</h2>
+        <h2>5. Retention and deletion</h2>
         <p>Uninstalling the app or clearing its storage removes all on-device data,
            which is also excluded from cloud backup and device transfer. Turning off all
            notifications clears your stored keywords; uninstalling invalidates the push
@@ -169,19 +202,19 @@
            server-side data for your device (such as the device identifier), e-mail us
            with your install date and the keywords/categories you had registered.</p>
 
-        <h2>5. Not used</h2>
-        <p>No analytics, no crash reporting, no access to location, contacts, photos,
-           camera, microphone or external storage. No sign-in.</p>
+        <h2>6. Not used</h2>
+        <p>No crash reporting, no access to location, contacts, photos, camera,
+           microphone or external storage. No sign-in.</p>
 
-        <h2>6. Third parties</h2>
+        <h2>7. Third parties</h2>
         <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> (AdMob, Firebase Cloud Messaging),
            <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a> (server, database).</p>
 
-        <h2>7. Children</h2>
+        <h2>8. Children</h2>
         <p>The app is not directed to children under 13 and does not knowingly collect
            personal information from them.</p>
 
-        <h2>8. Contact</h2>
+        <h2>9. Contact</h2>
         <p>Gunho Song — gunhosong@kakao.com</p>
 
         <p><strong>Effective:</strong> 22 September 2026</p>
