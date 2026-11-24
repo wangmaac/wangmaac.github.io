@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빛글 — 개인정보처리방침</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; color: #333; max-width: 760px; }
+        h1, h2 { color: #0056b3; }
+        a { color: #0056b3; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; }
+        table { border-collapse: collapse; margin-bottom: 1em; }
+        th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; vertical-align: top; }
+        th { background: #f4f4f4; }
+        .en { color: #555; border-top: 1px solid #ddd; margin-top: 2.5em; padding-top: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>개인정보처리방침</h1>
+    <p>이 방침은 안드로이드 앱 <strong>빛글</strong>(패키지명 <code>com.ghsong.hangul_clock</code>)에 적용됩니다.
+       앱은 회원가입이나 로그인을 요구하지 않고, 이름·이메일·전화번호를 수집하지 않으며, 광고를 싣지 않습니다.</p>
+
+    <h2>1. 처리하는 정보</h2>
+    <table>
+        <tr><th>항목</th><th>목적</th><th>어디에 두는지</th></tr>
+        <tr>
+            <td>앱 전용 기기 번호(ANDROID_ID)를 SHA-256으로 바꾼 값과 체험 시작 시각</td>
+            <td>7일 무료 체험을 한 번만 쓰도록 세기 위해. 첫 화면에서 "7일 무료로 시작"을 누를 때부터 보냅니다.</td>
+            <td>서버. 원래 번호는 기기 밖으로 나가지 않습니다.</td>
+        </tr>
+        <tr>
+            <td>고른 도시 번호</td>
+            <td>날씨를 보여 주기 위해</td>
+            <td>기기. 날씨를 받을 때 서버로 보내지만 저장하지 않고, 기기 번호와 함께 보내지 않습니다.</td>
+        </tr>
+        <tr>
+            <td>대략 위치</td>
+            <td>"현재 위치로 찾기"를 누를 때 가까운 도시를 고르기 위해</td>
+            <td>기기 안에서만 쓰고 저장하거나 보내지 않습니다.</td>
+        </tr>
+        <tr>
+            <td>구매 여부</td>
+            <td>앱을 쓸 수 있는지 확인하기 위해</td>
+            <td>기기와 Google Play. 결제 정보는 앱이 받지 않습니다.</td>
+        </tr>
+        <tr>
+            <td>화면 옵션, 마지막 날씨</td>
+            <td>앱을 다시 켰을 때 이어서 보여 주기 위해</td>
+            <td>기기(안드로이드 백업을 켰다면 Google 계정 백업에 포함될 수 있습니다)</td>
+        </tr>
+        <tr>
+            <td>IP 주소</td>
+            <td>서버에 한꺼번에 많이 요청하는 것을 막기 위해</td>
+            <td>요청을 처리하는 동안에만 쓰고 저장하지 않습니다.</td>
+        </tr>
+    </table>
+
+    <h2>2. 맡기거나 주고받는 곳</h2>
+    <ul>
+        <li>서버는 Cloudflare(Workers·D1)에 있으며, 서버 위치는 대한민국 밖일 수 있습니다.</li>
+        <li>날씨는 기상청, 한국환경공단 에어코리아, MET Norway에서 받습니다. 이곳에는 도시의 좌표나 측정소 이름만 보내고 사용자에 관한 정보는 보내지 않습니다.</li>
+        <li>결제는 Google Play가 처리합니다.</li>
+    </ul>
+
+    <h2>3. 보관과 삭제</h2>
+    <p>체험 기록(바꾼 기기 번호와 시작 시각)은 체험을 다시 쓰는 것을 막기 위해 서비스를 마칠 때까지 보관합니다.
+       삭제를 원하면 아래 주소로 알려 주세요. 기기에 있는 값은 앱을 지우면 함께 지워집니다.</p>
+
+    <h2>4. 권한</h2>
+    <ul>
+        <li>대략 위치: "현재 위치로 찾기"를 누를 때만 묻습니다. 거부해도 도시 이름으로 찾을 수 있습니다.</li>
+        <li>알람 및 리마인더: 홈 위젯의 시각을 1분마다 맞추는 데만 씁니다.</li>
+    </ul>
+
+    <h2>5. 어린이</h2>
+    <p>앱은 만 13세 미만을 대상으로 하지 않습니다.</p>
+
+    <h2>6. 유럽경제지역(EEA)·영국·스위스 이용자</h2>
+    <ul>
+        <li>처리 책임자: 아래 7항의 운영자</li>
+        <li>처리 근거: 날씨를 보여 주고 구매를 확인하는 것은 계약 이행(GDPR 제6조 제1항 b호), 체험을 한 번만 쓰도록 세고 서버 남용을 막는 것은 정당한 이익(같은 항 f호)에 따릅니다.</li>
+        <li>국외 이전: 서버(Cloudflare)는 유럽 밖 시설에서 정보를 처리할 수 있으며, EU 표준계약조항(SCC) 등 GDPR이 인정하는 보호 수단에 따릅니다.</li>
+        <li>이용자의 권리: 열람·정정·삭제·처리 제한·이의 제기·이동을 요청할 수 있습니다. 1개월 안에 답하며, 거주 국가의 감독기관에 민원을 제기할 수 있습니다. 앱에는 계정이 없고 서버에는 바꾼 기기 번호만 있어, 본인의 기록을 찾으려면 추가 확인이 필요할 수 있습니다.</li>
+        <li>자동화된 결정: 체험 기간이 지났는지 자동으로 계산하는 것 외에 법적 효과를 미치는 자동화된 결정을 하지 않습니다.</li>
+    </ul>
+
+    <h2>7. 문의</h2>
+    <p>운영자: 송건호 · <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a></p>
+    <p>시행일: 2026년 11월 24일</p>
+
+    <div class="en">
+        <h1>Privacy Policy</h1>
+        <p>This policy covers the Android app <strong>Bitgeul</strong> (<code>com.ghsong.hangul_clock</code>).
+           There is no sign-up and no advertising, and we do not collect your name, email or phone number.</p>
+        <ul>
+            <li><strong>Trial record</strong>: a SHA-256 hash of the app-specific device number (ANDROID_ID) and the trial start time are stored on our server so the 7-day trial is used once. They are sent only after you tap "Start 7 days free". The original number never leaves the device. Kept until the service ends; email us to ask for deletion.</li>
+            <li><strong>City</strong>: the number of the city you choose is sent to fetch weather. It is not stored and is never sent together with the device value.</li>
+            <li><strong>Approximate location</strong>: used only on the device, only when you tap "Use current location". Not stored or sent.</li>
+            <li><strong>Purchase status</strong>: checked with Google Play. We never receive payment details.</li>
+            <li><strong>IP address</strong>: used while handling a request to prevent abuse. Not stored.</li>
+            <li><strong>Settings and last weather</strong>: kept on the device, and in your Google backup if enabled.</li>
+        </ul>
+        <p>The server runs on Cloudflare (Workers, D1) and may be outside your country. Weather comes from KMA, AirKorea and MET Norway, which receive only city coordinates or station names. Payments are handled by Google Play.</p>
+        <p>The "Alarms &amp; reminders" permission is used only to keep the home screen widget on time. The app is not directed at children under 13.</p>
+        <h2>EEA, UK and Switzerland</h2>
+        <p>Legal bases: performance of a contract (weather, purchase checks; GDPR Art. 6(1)(b)) and legitimate interests (counting the trial once, preventing abuse; Art. 6(1)(f)). Transfers outside Europe rely on safeguards such as the EU Standard Contractual Clauses. You may request access, rectification, erasure, restriction, objection or portability; we answer within one month, and you may complain to your supervisory authority. There are no accounts and we hold only a hashed device value, so we may need additional details to find your record. Apart from calculating whether the trial has ended, no automated decisions with legal effect are made.</p>
+        <p>Operator: Gunho Song · <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a> · Effective November 24, 2026</p>
+    </div>
+
+    <div class="en">
+        <h1>プライバシーポリシー</h1>
+        <p>本ポリシーはAndroidアプリ<strong>ビッグル</strong>(<code>com.ghsong.hangul_clock</code>)に適用されます。
+           会員登録や広告はなく、氏名・メール・電話番号は収集しません。</p>
+        <ul>
+            <li><strong>体験の記録</strong>: アプリ専用の端末番号(ANDROID_ID)をSHA-256で変換した値と体験の開始時刻を、7日間の無料体験を一度だけ数えるためにサーバーに保存します。「7日間無料で始める」を押してから送信します。元の番号は端末の外に出ません。サービス終了まで保管し、削除はメールで承ります。</li>
+            <li><strong>都市</strong>: 選んだ都市の番号を天気の取得のために送信します。保存せず、端末の値と一緒に送ることもありません。</li>
+            <li><strong>おおよその位置情報</strong>: 「現在地から探す」を押したときに端末内だけで使い、保存も送信もしません。</li>
+            <li><strong>購入の有無</strong>: Google Playで確認します。支払い情報は受け取りません。</li>
+            <li><strong>IPアドレス</strong>: 過度なアクセスを防ぐため処理中にのみ使い、保存しません。</li>
+            <li><strong>設定と最後の天気</strong>: 端末に保存します(Androidのバックアップを有効にしている場合は含まれることがあります)。</li>
+        </ul>
+        <p>サーバーはCloudflare(Workers・D1)にあり、国外の場合があります。天気は韓国気象庁、AirKorea、MET Norwayから取得し、都市の座標や測定所名だけを送ります。決済はGoogle Playが処理します。</p>
+        <p>「アラームとリマインダー」の許可はホームウィジェットの時刻を合わせるためだけに使います。13歳未満を対象としていません。</p>
+        <h2>欧州経済領域(EEA)・英国・スイス</h2>
+        <p>法的根拠は契約の履行(天気・購入の確認、GDPR第6条1項b)と正当な利益(体験を一度だけ数えること・不正利用の防止、同項f)です。欧州外への移転はEU標準契約条項(SCC)などの保護措置に基づきます。閲覧・訂正・削除・処理の制限・異議申し立て・データポータビリティを求めることができ、1か月以内にお答えします。監督機関に苦情を申し立てることもできます。アカウントがなく変換後の端末番号のみを保管しているため、記録の特定に追加の確認が必要な場合があります。</p>
+        <p>運営者: ソン・ゴンホ · <a href="mailto:gunhosong@kakao.com">gunhosong@kakao.com</a> · 施行日 2026年11月24日</p>
+    </div>
+</body>
+</html>
