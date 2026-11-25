@@ -36,7 +36,7 @@
         <tr>
             <td>대략 위치</td>
             <td>"현재 위치로 찾기"를 누를 때 가까운 도시를 고르기 위해</td>
-            <td>기기 안에서만 쓰고 저장하거나 보내지 않습니다.</td>
+            <td>좌표는 기기 안에서만 쓰고 저장하거나 보내지 않습니다. 이렇게 고른 도시의 번호만 위와 같이 날씨를 받을 때 보냅니다.</td>
         </tr>
         <tr>
             <td>구매 여부</td>
@@ -95,7 +95,7 @@
         <ul>
             <li><strong>Trial record</strong>: a SHA-256 hash of the app-specific device number (ANDROID_ID) and the trial start time are stored on our server so the 7-day trial is used once. They are sent only after you tap "Start 7 days free". The original number never leaves the device. Kept until the service ends; email us to ask for deletion.</li>
             <li><strong>City</strong>: the number of the city you choose is sent to fetch weather. It is not stored and is never sent together with the device value.</li>
-            <li><strong>Approximate location</strong>: used only on the device, only when you tap "Use current location". Not stored or sent.</li>
+            <li><strong>Approximate location</strong>: the coordinates are used only on the device, only when you tap "Use current location", and are never stored or sent. Only the number of the city found this way is sent, as described above.</li>
             <li><strong>Purchase status</strong>: checked with Google Play. We never receive payment details.</li>
             <li><strong>IP address</strong>: used while handling a request to prevent abuse. Not stored.</li>
             <li><strong>Settings and last weather</strong>: kept on the device, and in your Google backup if enabled.</li>
@@ -114,7 +114,7 @@
         <ul>
             <li><strong>体験の記録</strong>: アプリ専用の端末番号(ANDROID_ID)をSHA-256で変換した値と体験の開始時刻を、7日間の無料体験を一度だけ数えるためにサーバーに保存します。「7日間無料で始める」を押してから送信します。元の番号は端末の外に出ません。サービス終了まで保管し、削除はメールで承ります。</li>
             <li><strong>都市</strong>: 選んだ都市の番号を天気の取得のために送信します。保存せず、端末の値と一緒に送ることもありません。</li>
-            <li><strong>おおよその位置情報</strong>: 「現在地から探す」を押したときに端末内だけで使い、保存も送信もしません。</li>
+            <li><strong>おおよその位置情報</strong>: 「現在地から探す」を押したときに座標を端末内だけで使い、保存も送信もしません。こうして選ばれた都市の番号だけを、上記のとおり天気を取得するときに送ります。</li>
             <li><strong>購入の有無</strong>: Google Playで確認します。支払い情報は受け取りません。</li>
             <li><strong>IPアドレス</strong>: 過度なアクセスを防ぐため処理中にのみ使い、保存しません。</li>
             <li><strong>設定と最後の天気</strong>: 端末に保存します(Androidのバックアップを有効にしている場合は含まれることがあります)。</li>
